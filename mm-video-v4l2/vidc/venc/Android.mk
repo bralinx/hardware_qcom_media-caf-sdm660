@@ -107,13 +107,13 @@ endif
 
 # Common Includes
 libmm-venc-inc      := $(LOCAL_PATH)/inc
-libmm-venc-inc      += $(TOP)/hardware/qcom/media-caf-sdm660/mm-video-v4l2/vidc/common/inc
-libmm-venc-inc      += hardware/qcom/media-caf-sdm660/mm-core/inc
-libmm-venc-inc      += hardware/qcom/media-caf-sdm660/libstagefrighthw
-libmm-venc-inc      += $(TARGET_OUT_HEADERS)/qcom/display-caf-sdm660
+libmm-venc-inc      += $(TOP)/hardware/qcom/media-$(TARGET_QCOM_MEDIA_VARIANT)/mm-video-v4l2/vidc/common/inc
+libmm-venc-inc      += hardware/qcom/media-$(TARGET_QCOM_MEDIA_VARIANT)/mm-core/inc
+libmm-venc-inc      += hardware/qcom/media-$(TARGET_QCOM_MEDIA_VARIANT)/libstagefrighthw
+libmm-venc-inc      += $(TARGET_OUT_HEADERS)/qcom/display-$(TARGET_QCOM_MEDIA_VARIANT)
 libmm-venc-inc      += $(TARGET_OUT_HEADERS)/adreno
-libmm-venc-inc      += hardware/qcom/media-caf-sdm660/libc2dcolorconvert
-libmm-venc-inc      += hardware/qcom/media-caf-sdm660/hypv-intercept
+libmm-venc-inc      += hardware/qcom/media-$(TARGET_QCOM_MEDIA_VARIANT)/libc2dcolorconvert
+libmm-venc-inc      += hardware/qcom/media-$(TARGET_QCOM_MEDIA_VARIANT)/hypv-intercept
 libmm-venc-inc      += $(TARGET_OUT_HEADERS)/libvqzip
 libmm-venc-inc      += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
 ifeq ($(call is-board-platform-in-list, $(TARGETS_THAT_SUPPORT_PQ)),true)
